@@ -1,0 +1,75 @@
+<% layout('layouts/boilerplate') -%>
+
+    <body>
+
+        <div class="row">
+            <div class="col col-8 offset-2">
+                
+               
+                <h3>Crete new Listing</h3>
+                
+
+                <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" name="listings[title]" class="form-control" required>
+                        <div class="valid-feedback">Looks Good!</div>
+                        <div class="invalid-feedback">please enter the valid title</div>
+                        
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea name="listings[description]"  class="form-control" required ></textarea>
+                        <div class="valid-feedback">Looks Good!</div>
+                        <div class="invalid-feedback">please enter the valid description</div>
+                       
+                        
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Image Upload</label>
+                        <input type="file" name="listings[image]" class="form-control" required>
+                        
+                        
+                    </div>
+                    <div class="row" class="mb-3">
+                    
+                    
+                        <div class="col col-4">
+                            <label for="price" class="form-label">price</label>
+                            <input  name="listings[price]" class="form-control" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                            <div class="invalid-feedback">please enter the valid price</div>
+                           
+                    
+                        </div>
+                        <div class="col col-8">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" name="listings[location]" class="form-control" required>
+                            <div class="valid-feedback">Looks Good!</div>
+                            <div class="invalid-feedback">please enter the valid location</div>
+                            
+                    
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <input type="text" name="listings[country]" class="form-control" required>
+                        <div class="valid-feedback">Looks Good!</div>
+                        <div class="invalid-feedback">please enter the valid country</div>
+                        
+
+                    </div>
+                    
+                    <button class="btn btn-dark add-btn mb-3">Add Listing</button>
+
+
+
+                </form>
+            </div>
+        </div>
+        
+
+
+    </body>
